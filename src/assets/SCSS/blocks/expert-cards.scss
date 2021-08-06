@@ -1,0 +1,65 @@
+.expert-cards{
+    .banner{
+        margin-bottom: 20px;
+    }
+    &__footer{
+        margin-top: 40px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &.inline{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        .expert-card{
+            display: block;
+            margin: 0 10px 20px;
+            width: calc(33.3333% - 20px);
+            &__ava{
+                margin: 0 auto 20px;
+            }
+            &__body{
+                display: block;
+                padding: 24px 30px 12px 30px;
+            }
+            &__block{
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                margin-bottom: 12px;
+            }
+            &__block-row{
+                margin-bottom: 0;
+                &:first-child{
+                    flex-shrink: 0;
+                }
+            }
+            &__reviews{
+                justify-content: flex-start;
+            }
+            &__review-link{
+                margin-right: auto;
+            }
+            &__footer{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 30px;
+                flex-direction: row;
+            }
+            &__price{
+                width: calc(50% - 4px);
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .expert-cards{
+        &__footer{
+            justify-content: center;
+        }
+    }
+}

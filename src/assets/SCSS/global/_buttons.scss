@@ -1,0 +1,121 @@
+
+.btn {
+  @include reset-button();
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  height: 50px;
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 130%;
+  transition: color 0.3s, background-color 0.3s;
+  span{
+    position: relative;
+    z-index: 1;
+  }
+  &--static{
+    width: 205px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &--dynamic-lg{
+    padding: 0 20px;
+    height: 40px;
+    display: inline-block;
+    line-height: 36px;
+  }
+  &--main{
+    color: #fff; 
+    background: #473FEC;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(276.14deg, #473EF1 0%, #4D48AF 100%);
+      transition: 0.3s;
+    }
+    &:hover{
+      color: #fff;
+      box-shadow: 0px 3px 6px rgba(71, 63, 236, 0.14);
+      &::before{
+        opacity: 0;
+      }
+    }
+  }
+  &--border-white{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: 0.3s;
+    &:hover{
+      background-color: #fff;
+      color: $black;
+      box-shadow: 0px 3px 6px rgba(71, 63, 236, 0.14);
+    }
+  }
+  &--border-main{
+    border: 2px solid $brand-color;
+    color: $black;
+    &:hover{
+      color: #fff;
+      background-color: $brand-color;
+      box-shadow: 0px 3px 6px rgba(71, 63, 236, 0.14);
+    }
+  }
+}
+
+.slider-arr{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid $brand-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  stroke: $brand-color;
+  transition: 0.3s;
+  background-color: transparent;
+  &:hover{
+      background-color: $brand-color;
+      stroke: #fff;
+  }
+  &:focus{
+      outline: none;
+  }
+  &--white{
+    border: 1px solid #fff;
+    stroke: #fff;
+    &:hover{
+      background-color: #fff;
+      stroke: $brand-color;
+    }
+  }
+}
+
+.add-btn{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: none;
+  transition: 0.3s;
+  svg{
+      fill: #777;
+  }
+  &:hover{
+      background-color: $brand-color;
+      svg{
+          fill: #fff;
+      }
+  }
+}

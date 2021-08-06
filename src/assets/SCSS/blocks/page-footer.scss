@@ -1,0 +1,131 @@
+.footer {
+    background-color: #0E0035;
+    &__top{
+        padding: 19.5px 0 19.5px;
+    }
+    &__top-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__logo{
+        display: block;
+        width: 154px;
+        position: relative;
+        top: -10px;
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+    }
+    &__nav-item{
+        margin-right: 17px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__nav-link{
+        color: #C5C2CF;
+        font-family: $font-cardo;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 130%;
+        transition: 0.3s;
+        &:hover{
+            color: $brand-color;
+        }
+    }
+    &__copyright{
+        font-family: $font-cardo;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 130%;
+        color: #C5C2CF;
+    }
+    .langs{
+        &__item-link{
+            color: #C5C2CF;
+        }
+        &__sublist{
+            top: auto;
+            bottom: calc(100% + 10px);
+            &::before{
+                top: auto;
+                bottom: -12px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .footer{
+        &__top{
+            padding-bottom: 13px;
+        }
+        &__bot{
+            padding: 13px 0 26px;
+            text-align: center;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .footer{
+        &__logo{
+            order: 1;
+        }
+        .langs{
+            order: 2;
+        }
+        &__nav{
+            order: 3;
+            margin-top: 24px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .footer{
+        &__nav{
+            flex-wrap: wrap;
+            margin-bottom: -10px;
+        }
+        &__nav-item{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .footer{
+        &__top{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .langs{
+            margin-top: 8px;
+        }
+        &__nav{
+            display: block;
+            margin-top: 32px;
+            width: 100%;
+        }
+        &__nav-item{
+            margin-bottom: 16px;
+        }
+        &__nav-link{
+            text-align: center;
+            display: block;
+        }
+    }
+}
+
+
+
+
+

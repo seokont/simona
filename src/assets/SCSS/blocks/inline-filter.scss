@@ -1,0 +1,99 @@
+.inline-filter{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__tabs{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: -10px;
+    }
+    &__tabs-item{
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    &__tabs-link{
+        font-weight: bold;
+        font-size: 15px;
+        color: #A0ABBD;
+        width: 132px;
+        height: 40px;
+        text-align: center;
+        display: block;
+        line-height: 36px;
+        border: 2px solid #D5D9E0;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        span{
+            position: relative;
+            z-index: 1;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(276.14deg, #473EF1 0%, #4D48AF 100%);
+            opacity: 0;
+            transition: 0.3s;
+        }
+        &:hover, &.active{
+           color: #fff;
+           border-color: #fff;
+           &::after{
+               opacity: 1;
+           } 
+        }
+    }
+}
+
+.display-btns{
+    display: flex;
+    align-items: center;
+}
+
+.display-btn{
+    width: 26px;
+    height: 26px;
+    border: 1px solid #D5D9E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 6px;
+    position: relative;
+    overflow: hidden;
+    svg{
+        position: relative;
+        z-index: 1;
+        transition: 0.3s;
+        fill: #A0ABBD;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(276.14deg, #473EF1 0%, #4D48AF 100%);
+        opacity: 0;
+        transition: 0.3s;
+    }
+    &:last-child{
+        margin-right: 0;
+    }
+    &:hover, &.active{
+        border-color: transparent;
+        svg{
+            fill: #fff;
+        }
+        &::after{
+            opacity: 1;
+        }
+    }
+}

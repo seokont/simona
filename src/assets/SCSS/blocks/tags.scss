@@ -1,0 +1,50 @@
+.tags{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: -4px;
+    &__item{
+        margin-right: 10px;
+        margin-bottom: 4px;
+    }
+    &__link{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 135%;
+        color: $brand-color;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &::after{
+            content: '';
+            width: 7px;
+            height: 7px;
+            display: block;
+            background-image: url(../img/chevron-right-purpure.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-left: 6px;
+        }
+        span{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                transition: 0.3s;
+                border-bottom: 1px solid $brand-color;
+            }
+        }
+        &:hover{
+            color: $brand-color;
+            span{
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

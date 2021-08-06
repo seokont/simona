@@ -1,0 +1,30 @@
+.benefits-section{
+    &__item{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__item-icon{
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+    &__item-title{
+        font-size: 16px;
+        line-height: 135%;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .benefits-section{
+        &__list{
+            margin-bottom: -30px;
+        }
+        &__list-item{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+
+}

@@ -1,0 +1,19 @@
+.faq-section{
+    overflow: hidden;
+    .container{
+        position: relative;
+    }
+    &__img{
+        position: absolute;
+        bottom: 100px;
+        right: -155px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .faq-section{
+        &__img{
+            display: none;
+        }
+    }
+}

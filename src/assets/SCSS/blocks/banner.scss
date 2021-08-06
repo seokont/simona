@@ -1,0 +1,46 @@
+.banner{
+    position: relative;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    background-image: url('../img/banner-bg.jpg');
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(15, 2, 53, 0.7);
+    }
+    &__content{
+        position: relative;
+        z-index: 1;
+        max-width: 450px;
+    }
+    &__title{
+        color: #fff;
+        margin-bottom: 6px;
+    }
+    &__text{
+        color: #fff;
+    }
+    .btn{
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .banner{
+        display: block;
+        padding: 24px 16px;
+        &__content{
+            margin-bottom: 16px;
+        }
+    }
+}
